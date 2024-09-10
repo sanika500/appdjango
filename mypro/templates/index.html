@@ -1,23 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>HELLO,WORLD!</h1>
-    <form action="{% url 'index' %}" method="post">
-    {% csrf_token %}
-    <input type="text" name="name" placeholder="name">
-  <input type="button" name="name" value="submit">
-     </form>
-    {% for i in obj %} -->
-    <!-- <p> {{ i.name}}</p>
-    {% endfor %}
-</body>
-</html>   -->
 
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,5 +16,20 @@
     <input type="text" name="password" placeholder="password">
     <input type="submit" value="submit">
     </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for item in mylist %}
+    <p> {{item}}</p>
+    {% endfor %}
+</form>
 </body>
 </html>
