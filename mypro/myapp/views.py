@@ -18,7 +18,7 @@ def index (request):
     mylist=['apple','grape','orange','banana']
     return render(request,'index.html',{'mylist':mylist})
 def about(request):
-    obj=todo.objects.all()
+    obj=details.objects.all()
     return render (request,'about.html',{'obj':obj})
     
 

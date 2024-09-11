@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    {% for item in mylist %}
-    <p> {{item}}</p>
+    {% for item in obj %}
+    <p> {{item.name}}</p><p>{{item.email}}</p><p>{{item.password}}</p>
     {% endfor %}
 </body>
 </html>
