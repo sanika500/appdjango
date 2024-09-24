@@ -44,5 +44,15 @@
    {% for todo in todos %}
    </div>
 
+   <h1>{{todo.title}}</h1>
+   <a href="{% url 'delete_g' todo.pk %}">
+    <button class="btn btn-danger my-50">delete</button></a>
+    <a href="{% url 'edit_g' todo.pk %}">
+        <button class="btn btn-danger my-50">edit</button></a>
+    <h1>enter your choice</h1>
+    </div>
+    {% endfor %}
+</div>
+</div>
 </body>
 </html>
