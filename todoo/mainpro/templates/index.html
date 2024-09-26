@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="{% url 'index' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="name">
+        <input type="submit" value="submit">
+    </form>
+    {% for i in obj %}
+    <p>{{i.todo}}</p>
+
+    <div>
+        <h1>{{todo.title}}</h1>
+        <a href="{% url 'delete_g' i.pk %}"><button class="btn btn-danger my-50">delete</button></a>
+        {% endfor %}
+    </div> -->
+
+   {% if data %}
+
+   <form action="" method="post" class="mx-auto w-50">
+    {% csrf_token%}
+    <label for="task"> TODO TASK</label>
+    <input type="text" name="todo" value="{{data.title}}">
+    <input type="submit" value="update" class="btn btn-success">
+   </form> 
+
+   {% else %}
+
+   <form action="" method="post" class="mx-auto w-50">
+    {% csrf_token%}
+    <label for="task"> TODO TASK</label>
+    <input type="text" name="todo" >
+    <input type="submit" value="submit" class="btn btn-success">
+   </form>
+
+   {% endif %}
+   
+   <div class="container">
+   {% for todo in todos %}
+   </div>
+
+   <h1>{{todo.title}}</h1>
+   <a href="{% url 'delete_g' todo.pk %}">
+    <button class="btn btn-danger my-50">delete</button></a>
+    <a href="{% url 'edit_g' todo.pk %}">
+        <button class="btn btn-danger my-50">edit</button></a>
+    <h1>enter your choice</h1>
+    </div>
+    {% endfor %}
+</div>
+</div>
+</body>
+</html>
