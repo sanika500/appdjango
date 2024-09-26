@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login,logout
-from django.contrib.auth.models import user 
+from django.contrib.auth.models import User 
 
 # Create your views here.
 def index(request):
@@ -11,8 +11,8 @@ def index(request):
         if user is not None:
             login(request,user)
             return redirect('home')
-    else:
-        return render(request,'index.html')
+        
+    return render(request,'index.html')
 def home(request):
     return render(request,'home.html')
 def logout_view(request):
@@ -23,7 +23,7 @@ def register(request):
         username=request.POST['username']
         password=request.POST['password']
         email=request.POST['email']
-        user=user.objects.create_user(username=username,password=password,email=email)
+        user=User.objects.create_user(username=username,password=password,email=email)
         user.save()
         return redirect('index')
     else:
